@@ -101,7 +101,7 @@ const otpVerifyLimiter = rateLimit({
 const compileLimiter = rateLimit({
   store,
   windowMs: 60 * 1000,
-  max: (req) => (req.user ? 10 : 3),
+  max: (req) => (req.user ? 15 : 5),
   message: "Too many compilation requests.",
   keyGenerator,
   standardHeaders: true,
